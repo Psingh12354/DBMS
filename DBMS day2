@@ -1,0 +1,36 @@
+1] Union
+Create table tab1(name char(20),id varchar2(20));
+Create table tab2(name char(20),id varchar2(20));
+Insert into tab1 values('Priyanshu',20);
+Insert into tab2 values('Priyanshu',21);
+select name,id from tab1 union select name,id from tab2;
+2] Union ALl
+Create table tab1(name char(20),id varchar2(20));
+Create table tab2(name char(20),id varchar2(20));
+Insert into tab1 values('Priyanshu',20);
+Insert into tab2 values('Priyanshu',21);
+select name,id from tab1 union all select name,id from tab2;
+3] Intersect
+Create table tab1(name char(20),id varchar2(20));
+Create table tab2(name char(20),id varchar2(20));
+Insert into tab1 values('Priyanshu',20);
+Insert into tab1 values('Priyanshu',21);
+Insert into tab2 values('Priyanshu',21);
+Insert into tab2 values('Priyanshu',22);
+select name,id from tab1 intersect select name,id from tab2;
+4] Minus
+Create table tab1(name char(20),id varchar2(20));
+Create table tab2(name char(20),id varchar2(20));
+Insert into tab1 values('Priyanshu',20);
+Insert into tab1 values('Priyanshu',21);
+Insert into tab2 values('Priyanshu',21);
+Insert into tab2 values('Priyanshu',22);
+select name,id from tab1 minus select name,id from tab2;
+
+
+5] Data
+Create table tab3(name char(20),id varchar2(20),salary number);
+Insert into tab3 values('Priyanshu',20,2000);
+Insert into tab3 values('Priyanshu',21,400000);
+select avg(salary),min(salary),sum(salary),count(salary) from tab3;
+
